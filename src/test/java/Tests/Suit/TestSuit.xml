@@ -1,0 +1,27 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="EatstreetThreeBrowsers" parallel="tests" thread-count="1">
+
+    <test verbose="1" name="testing-chrome" annotations="JDK">
+        <parameter name="driver-name" value="chrome"/>
+        <classes>
+            <class name="Tests.CheckHeaderEatStreet"/>
+            <class name="Tests.CheckFooterEatstreet"/>
+        </classes>
+    </test>
+
+    <test verbose="1" name="testing-firefox" annotations="JDK">
+        <parameter name="driver-name" value="firefox"/>
+        <classes>
+            <class name="Tests.CheckHeaderEatStreet"/>
+            <class name="Tests.CheckFooterEatstreet"/>
+        </classes>
+    </test>
+
+    <test verbose="1" name="testing-opera" annotations="JDK">
+        <parameter name="driver-name" value="opera"/>
+        <classes>
+            <class name="Tests.CheckHeaderEatStreet"/>
+            <class name="Tests.CheckFooterEatstreet"/>
+        </classes>
+    </test>
+</suite>
